@@ -20,6 +20,9 @@ jobs:
       - name: Instalar dependências
         run: pipenv sync -d
 
+      - name: Rodar os testes
+        run: pipenv run pytest
+
       - name: Rodar o flake8
         run: pipenv run flake8
 
