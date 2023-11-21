@@ -12,7 +12,7 @@ console_command = "/code/manage.py shell"
 [env]
   PORT = "8000"
   DEBUG = false
-  SECRET_KEY = '@q1$y4(&ilv0!#&z(o^klix3oe4@jsb&0he6fx=f#(5at=&i=_'
+
 [http_service]
   internal_port = 8000
   force_https = true
