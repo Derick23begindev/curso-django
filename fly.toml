@@ -27,6 +27,3 @@ console_command = "/code/manage.py shell"
 
 [deploy]
   release_command = "python manage.py migrate"
-
-#[[services]]
-#  script = "gunicorn pypro.wsgi --log-file"
