@@ -11,9 +11,15 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
 
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15.2
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: testdb
+        ports: [ '5432:5432' ]
+
     needs: test
     steps:
       - uses: actions/checkout@v4
