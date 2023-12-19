@@ -6,8 +6,10 @@ videos = [
 ]
 
 videos_dct = {dct['slug']: dct for dct in videos}
+
+
 def indice(request):
-    return render(request, 'aperitivos/indice.html',context={'videos': videos})
+    return render(request, 'aperitivos/indice.html', context={'videos': videos})
 
 
 def video(request, slug):
