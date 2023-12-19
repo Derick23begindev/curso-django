@@ -9,7 +9,7 @@
             <h1 class="mt-4 mb-3">Lista de Videos Aperitivos</h1>
             <ol>
                 {% for video in videos %}
-                    <li>{{ video.titulo | default:"Faltando Título"}}</li>
+                <li><a href="{% url 'aperitivos:indice' %}{{ video.slug }}">{{ video.titulo | default:"Faltando Título"}}</a></li>
                 {% empty %}
                     <li>Não foi encontrado nenhum video de aperitivo.</li>
                 {% endfor %}
