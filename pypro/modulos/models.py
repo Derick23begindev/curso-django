@@ -28,7 +28,6 @@ class Aula(OrderedModel):
     order_with_respect_to = 'modulo'
     vimeo_id = models.CharField(max_length=32)
 
-
     class Meta(OrderedModel.Meta):
         pass
 
