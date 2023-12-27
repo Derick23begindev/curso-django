@@ -26,6 +26,8 @@ class Aula(OrderedModel):
     order = models.PositiveIntegerField("order", editable=False, db_index=True, null=True)
     modulo = models.ForeignKey('Modulo', on_delete=models.PROTECT)
     order_with_respect_to = 'modulo'
+    vimeo_id = models.CharField(max_length=32)
+
 
     class Meta(OrderedModel.Meta):
         pass
