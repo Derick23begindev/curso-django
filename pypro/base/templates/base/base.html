@@ -55,14 +55,19 @@
                 </li>
             </ul>
             {% if user.is_authenticated %}
-                <ul class="navbar-nav mb-2 mb-lg-0">
+            <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ user.first_name }}
                     </a>
                     <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <button type="button" class="dropdown-item">Sair</button>
+                        <div class="dropdown-item">
+                            <form method="post" action="{% url 'logout' %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Sair</button>
+                            </form>
+                        </div>
                     </div>
                 </li>
             </ul>
